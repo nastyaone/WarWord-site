@@ -1,57 +1,32 @@
 <script lang="ts">
 	import '../app.css';
-	import { onMount } from 'svelte';
-
-
     let { children } = $props();
-    let vantaElement: HTMLDivElement;
-    let vantaEffect: any;
 
-    onMount(() => {
-        // Load scripts dynamically
-        const loadScript = (src: string) => {
-            return new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.onload = resolve;
-                script.onerror = reject;
-                document.head.appendChild(script);
-            });
-        };
-
-        const initVanta = async () => {
-            try {
-                await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js');
-                await loadScript('https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js');
-                
-                // @ts-ignore
-                vantaEffect = window.VANTA.NET({
-                    el: vantaElement,
-                    mouseControls: false,
-                    touchControls: false,
-                    gyroControls: false,
-                    minHeight: 200.00,
-                    minWidth: 200.00,
-                    scale: 1.00,
-                    scaleMobile: 1.00,
-					color: 0xffffff,
-					backgroundColor: 0x000000
-                });
-            } catch (error) {
-                console.error('Failed to load Vanta.js:', error);
-            }
-        };
-
-        initVanta();
-
-        return () => {
-            if (vantaEffect) vantaEffect.destroy();
-        };
-    });
 </script>
 
-<div class="relative h-screen w-screen bg-black overflow-hidden p-5" bind:this={vantaElement}>
-    <div class="relative z-10 flex items-center justify-center bg-white/80 rounded-lg shadow-lg h-full w-full p-4">
-        {@render children()}
+<div class="grid grid-rows-[auto_1fr_auto] min-h-screen">
+
+    <header class="bg-surface-950 p-4 text-surface-contrast-950 border-primary-400 border-2 rounded-lg">
+        <nav class="grid grid-cols-[2fr_auto]">
+            <img src="/favicon.svg" alt="Logo" class="h-7 w-7"/>
+            <ul class="flex gap-4 justify-end items-center">
+                <li><a href="/" class="hover:bg-surface-50 hover:text-surface-contrast-50 p-2 rounded-lg">Home</a></li>
+                <li><a href="/manuale" class="hover:bg-surface-50 hover:text-surface-contrast-50 p-2 rounded-lg">Manuale</a></li>
+                <li><a href="/storia" class="hover:bg-surface-50 hover:text-surface-contrast-50 p-2 rounded-lg">Storia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto grid grid-cols-1 p-2 flex-1">
+        <main class="h-full">
+            {#if children}
+                {@render children()}
+            {:else}
+                <p class="text-gray-500">No content available.</p>
+            {/if}
+        </main>
     </div>
+
+    <footer class="bg-primary-50 p-4 text-primary-contrast-50">Created with love by <a href="https://github.com/TroncoNinja" class="text-tertiary-contrast-50 hover:bg-tertiary-50 p-1 rounded-lg">@TroncoNinja</a><span class="text-primary-50">Questo sito non è facebook ;)</span></footer>
+
 </div>
