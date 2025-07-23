@@ -6,7 +6,7 @@
 
 <div class="grid grid-rows-[auto_1fr_auto] min-h-screen">
 
-    <header class="bg-surface-950 p-4 text-surface-contrast-950 border-primary-400 border-2 rounded-lg">
+    <header class="sticky top-0 z-10 bg-surface-950 p-4 text-surface-contrast-950 border-primary-400 border-2 rounded-lg">
         <nav class="grid grid-cols-[2fr_auto]">
             <img src="/favicon.svg" alt="Logo" class="h-7 w-7"/>
             <ul class="flex gap-4 justify-end items-center">
@@ -17,12 +17,12 @@
         </nav>
     </header>
 
-    <div class="container mx-auto grid grid-cols-1 p-2 flex-1">
-        <main class="h-full">
+    <div class="flex-1 p-4 ">
+        <main class="h-full w-full">
             {#if children}
                 {@render children()}
             {:else}
-                <p class="text-gray-500">No content available.</p>
+                <p class="text-gray-500 text-center text-sm sm:text-base">No content available.</p>
             {/if}
         </main>
     </div>
