@@ -97,7 +97,7 @@
     </li>
 {/snippet}
 
-<div class="grid grid-cols-[300px_1fr] min-h-screen">
+<div class="grid grid-cols-[1fr_4fr] h-full">
     <nav class="bg-surface-100-800-token border-r border-surface-300-600-token overflow-y-auto">
         <div class="p-4">
             <h2 class="text-xl font-bold text-surface-900-50-token mb-4">WarWorld</h2>
