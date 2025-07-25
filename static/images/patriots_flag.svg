@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="400"
+   viewBox="0 0 800.00003 400.00001"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="patriots_flag.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1.0243155"
+     inkscape:cx="405.63675"
+     inkscape:cy="214.28945"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#d40000;stroke:#502d16"
+       id="rect2"
+       width="800"
+       height="400"
+       x="0"
+       y="0" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 0,120 H 799.99997 V 99.999998 H 0 Z"
+       id="path4-3-1" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 0,70 H 799.99997 V 50 H 0 Z"
+       id="path4-3-5" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 0,20 H 799.99997 V 0 H 0 Z"
+       id="path4-3-9" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="m 0,369.99999 h 799.99997 v -20 H 0 Z"
+       id="path4" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="m 0,319.99999 h 799.99997 v -20 H 0 Z"
+       id="path4-5" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="m 0,269.99999 h 799.99997 v -20 H 0 Z"
+       id="path4-2" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 0,220 H 799.99997 V 200 H 0 Z"
+       id="path4-4" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 0,170 H 799.99997 V 150 H 0 Z"
+       id="path4-3" />
+    <rect
+       style="fill:#000080;stroke:#502d16"
+       id="rect1"
+       width="320"
+       height="200"
+       x="0"
+       y="0" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 9.9999996,200 319.99999,9.9999998 319.99999,0 h -10 L 0,190 v 10 z"
+       id="path2"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:#ffffff;stroke:none"
+       d="M 309.99999,200 0,9.9999998 V 0 H 9.9999996 L 319.99999,190 v 10 z"
+       id="path3"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+</svg>
