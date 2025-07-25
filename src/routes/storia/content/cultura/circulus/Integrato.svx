@@ -1,0 +1,3 @@
+Abitante del [[Circulus Ciambellista]] che non possiede la cittadinanza, L'Integrato non può prendere parte alla vita pubblica del Circulus e viene considerato inferiore al cittadino "de facto".
+
+Per diventare un Integrato devono passare almeno 50 anni, vissuti ai confini del Circulus come nomade. Se si viene ritenuti degni si passa attraverso una cerimonia dove viene cancellata la memoria e si diventa a tutti gli effetti un Integrato. 

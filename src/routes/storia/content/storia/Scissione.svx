@@ -1,0 +1,1 @@
+è l'evento che segnò il lancio delle testate nucleari da parte di ex Nato e Russia verso le corrispettive nazioni.

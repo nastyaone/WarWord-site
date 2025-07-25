@@ -1,0 +1,1 @@
+Dopo la [[Scissione]] ci sono circa 12 anni di storia che vedono il mondo nel caos e nel tumulto. L'epoca nascosta termina con la fondazione delle [[ONN]].

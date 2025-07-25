@@ -1,0 +1,1 @@
+È l'accordo firmato da tutte le nazioni partecipanti che sancisce la creazione delle [[ONN (Organizzazioni Nazioni Neutrali)|ONN]]. Nel suo testo, composto da 24 punti, viene descritto il funzionamento giuridico dell'organizzazione e le regole guida dei singoli stati membri.

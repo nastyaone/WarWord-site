@@ -61,10 +61,10 @@
     {@const paddingLeft = level * 4 + 4}
     
     <li>
-        <div class="flex items-center">
+        <div class="flex justify-between space-x-2">
             <a 
                 href={item.url}
-                class="flex-1 px-3 py-2 text-sm {level === 0 ? 'font-medium' : ''} text-surface-{level === 0 ? '700' : '600'}-{level === 0 ? '200' : '300'}-token hover:bg-surface-200-700-token rounded-token transition-colors"
+                class=" px-3 py-2 text-sm text-primary-200 hover:underline"
                 style="padding-left: {paddingLeft * 0.25}rem"
             >
                 {item.title}
@@ -72,7 +72,7 @@
             {#if hasSubchapters}
                 <button
                     onclick={() => toggleDropdown(item.id)}
-                    class="p-2 text-primary-500-400-token hover:text-primary-700-200-token transition-colors"
+                    class=" p-2 px-3 text-primary-200 hover:text-primary-contrast-200 hover:bg-primary-200 rounded-lg transition-colors duration-300"
                     aria-label="Toggle subchapters"
                 >
                     <svg 
@@ -97,10 +97,10 @@
     </li>
 {/snippet}
 
-<div class="grid grid-cols-[1fr_4fr] h-full">
-    <nav class="bg-primary-100-800 border-r border-primary-300 overflow-y-auto">
+<div class="grid grid-cols-[1fr_4fr] h-full gap-4">
+    <nav class="bg-surface-950/90 border-r border-primary-200 overflow-y-auto rounded-l-lg">
         <div class="p-4">
-            <h2 class="text-xl font-bold text-surface-900 mb-4">WarWorld</h2>
+            <h2 class="text-xl font-bold text-surface-50 mb-4">WarWorld</h2>
             
             <ul class="space-y-1">
                 {#each chapters as chapter}
@@ -110,7 +110,7 @@
         </div>
     </nav>
     
-    <main class="p-6 bg-surface-50-900-token">
+    <main class="p-6 bg-surface-950 rounded-lg overflow-y-auto text-surface-50">
         {@render children()}
     </main>
 </div>

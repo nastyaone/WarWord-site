@@ -1,0 +1,2 @@
+Il Libero Mercato Mondiale, abbreviato in LMM è un mercato libero dove le singole nazioni possono accedervi. Il LMM è gestito dal [[Circulus Ciambellista]] che si è posto come nazione/impero neutrale nel piano globale. Per poter commerciare liberamente le singole nazioni e i singoli imperi devono firmare un trattato di non belligeranza con il circolo.
+La moneta utilizzata per gli scambi è il [[Nuovo Dollaro]]
