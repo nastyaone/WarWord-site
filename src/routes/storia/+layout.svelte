@@ -72,7 +72,7 @@
             {#if hasSubchapters}
                 <button
                     onclick={() => toggleDropdown(item.id)}
-                    class="p-2 text-surface-500-400-token hover:text-surface-700-200-token transition-colors"
+                    class="p-2 text-primary-500-400-token hover:text-primary-700-200-token transition-colors"
                     aria-label="Toggle subchapters"
                 >
                     <svg 
@@ -98,9 +98,9 @@
 {/snippet}
 
 <div class="grid grid-cols-[1fr_4fr] h-full">
-    <nav class="bg-surface-100-800-token border-r border-surface-300-600-token overflow-y-auto">
+    <nav class="bg-primary-100-800 border-r border-primary-300 overflow-y-auto">
         <div class="p-4">
-            <h2 class="text-xl font-bold text-surface-900-50-token mb-4">WarWorld</h2>
+            <h2 class="text-xl font-bold text-surface-900 mb-4">WarWorld</h2>
             
             <ul class="space-y-1">
                 {#each chapters as chapter}

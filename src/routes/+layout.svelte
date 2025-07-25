@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import '../app.css';
-	import { Rotate3dIcon } from '@lucide/svelte';
 
     let { children } = $props();
     let vantaElement: HTMLElement;
