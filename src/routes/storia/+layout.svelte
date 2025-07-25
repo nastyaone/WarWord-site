@@ -1,61 +1,24 @@
 <script lang="ts">
     import { slide } from 'svelte/transition';
 
-    let { children } = $props();
+    let { children, data } = $props();
 
-    // Example data structure for chapters and subchapters
-    let chapters = [
-        {
-            id: 1,
-            title: 'Chapter 1: Introduction',
-            url: '/storia/chapter-1',
-            subchapters: [
-                { id: 11, title: '1.1 Overview', url: '/storia/chapter-1/overview' },
-                { id: 12, title: '1.2 Background', url: '/storia/chapter-1/background',
-                    subchapters: [
-                        { id: 121, title: '1.2.1 Historical Context', url: '/storia/chapter-1/background/historical' ,
-						  subchapters: [
-							  { id: 1211, title: '1.2.1.1 Ancient History', url: '/storia/chapter-1/background/historical/ancient' },
-							  { id: 1212, title: '1.2.1.2 Medieval History', url: '/storia/chapter-1/background/historical/medieval' },
-							  { id: 1213, title: '1.2.1.3 Modern History', url: '/storia/chapter-1/background/historical/modern' }
-						  ]
-						},
-                        { id: 122, title: '1.2.2 Modern Context', url: '/storia/chapter-1/background/modern' }
-                    ]
-                }
-            ]
-        },
-        {
-            id: 2,
-            title: 'Chapter 2: Development',
-            url: '/storia/chapter-2',
-            subchapters: [
-                { id: 21, title: '2.1 Early Stage', url: '/storia/chapter-2/early' },
-                { id: 22, title: '2.2 Growth', url: '/storia/chapter-2/growth' }
-            ]
-        },
-        {
-            id: 3,
-            title: 'Chapter 3: Conclusion',
-            url: '/storia/chapter-3',
-            subchapters: []
-        }
-    ];
+    const chapters = data.chapters || [];
 
-    let openDropdowns = $state(new Set());
+    let openDropdowns = $state(new Set<number>());
 
     function toggleDropdown(id: number) {
-        if (openDropdowns.has(id)) {
-            openDropdowns.delete(id);
+        const newSet = new Set(openDropdowns);
+        if (newSet.has(id)) {
+            newSet.delete(id);
         } else {
-            openDropdowns.add(id);
+            newSet.add(id);
         }
-        // Trigger reactivity by reassigning the Set
-        openDropdowns = new Set(openDropdowns);
+        openDropdowns = newSet;
     }
 </script>
 
-{#snippet NavItem(item: { id: any; title: any; url: any; subchapters: any; }, level = 0)}
+{#snippet NavItem(item: { id: any; title: any; url: any; hasContent: any; subchapters: any; }, level = 0)}
     {@const hasSubchapters = item.subchapters && item.subchapters.length > 0}
     {@const isOpen = openDropdowns.has(item.id)}
     {@const paddingLeft = level * 4 + 4}
@@ -63,16 +26,17 @@
     <li>
         <div class="flex justify-between space-x-2">
             <a 
-                href={item.url}
-                class=" px-3 py-2 text-sm text-primary-200 hover:underline"
+                href={item.hasContent ? item.url : undefined}
+                class="px-3 py-2 text-sm {item.hasContent ? 'text-primary-200 hover:underline' : 'text-primary-200 cursor-not-allowed pointer-events-none'}"
                 style="padding-left: {paddingLeft * 0.25}rem"
+                tabindex={item.hasContent ? 0 : -1}
             >
                 {item.title}
             </a>
             {#if hasSubchapters}
                 <button
                     onclick={() => toggleDropdown(item.id)}
-                    class=" p-2 px-3 text-primary-200 hover:text-primary-contrast-200 hover:bg-primary-200 rounded-lg transition-colors duration-300"
+                    class="p-2 px-3 text-primary-200 hover:text-primary-contrast-200 hover:bg-primary-200 rounded-lg transition-colors duration-300"
                     aria-label="Toggle subchapters"
                 >
                     <svg 
