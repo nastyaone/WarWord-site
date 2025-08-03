@@ -5,22 +5,16 @@
 
     const chapters = data.chapters || [];
 
-    let openDropdowns = $state(new Set<number>());
+    let openDropdowns = $state<Record<number, boolean>>({});
 
     function toggleDropdown(id: number) {
-        const newSet = new Set(openDropdowns);
-        if (newSet.has(id)) {
-            newSet.delete(id);
-        } else {
-            newSet.add(id);
-        }
-        openDropdowns = newSet;
+        openDropdowns[id] = !openDropdowns[id];
     }
 </script>
 
 {#snippet NavItem(item: { id: any; title: any; url: any; hasContent: any; subchapters: any; }, level = 0)}
     {@const hasSubchapters = item.subchapters && item.subchapters.length > 0}
-    {@const isOpen = openDropdowns.has(item.id)}
+    {@const isOpen = openDropdowns[item.id] || false}
     {@const paddingLeft = level * 4 + 4}
     
     <li>

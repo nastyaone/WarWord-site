@@ -15,21 +15,17 @@ let idCounter = 1;
 async function checkHasContent(contentPath: string): Promise<boolean> {
     try {
         const items = await readdir(contentPath);
-        let fileCount = 0;
         
         for (const item of items) {
             const itemPath = join(contentPath, item);
             const itemStat = await stat(itemPath);
             
-            if (itemStat.isFile() && ['.md', '.svx'].includes(extname(item))) {
-                fileCount++;
-                if (fileCount > 1) {
-                    return false; // Early exit if more than 1 file
-                }
+            if (itemStat.isFile() && item === '+page.svx') {
+                return true; // Found +page.svx file
             }
         }
         
-        return fileCount === 1; // True only if exactly 1 file
+        return false; // No +page.svx file found
     } catch {
         return false;
     }
