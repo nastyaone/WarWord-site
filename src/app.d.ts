@@ -10,9 +10,4 @@ declare global {
 	}
 }
 
-declare module 'vanta/src/vanta.net' {
-  const NET: any;
-  export = NET;
-}
-
 export {};
